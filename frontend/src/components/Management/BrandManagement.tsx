@@ -77,7 +77,6 @@ const BrandManagement: React.FC = () => {
               <thead className="sticky top-0 bg-gray-50 dark:bg-slate-700 border-b border-gray-200 dark:border-slate-600">
                 <tr>
                   <th className="table-header px-6 py-4 text-left">Name</th>
-                  <th className="table-header px-6 py-4 text-left">Logo</th>
                   <th className="table-header px-6 py-4 text-left">Created Date</th>
                   <th className="table-header px-6 py-4 text-left">Actions</th>
                 </tr>
@@ -90,13 +89,6 @@ const BrandManagement: React.FC = () => {
                         <FiTag className="w-4 h-4 text-blue-600 dark:text-blue-400 mr-2" />
                         <span className="font-medium text-gray-900 dark:text-gray-100">{brand.name}</span>
                       </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      {brand.logo ? (
-                        <img src={brand.logo} alt={brand.name} className="w-10 h-10 object-contain rounded" />
-                      ) : (
-                        <span className="text-gray-500 dark:text-gray-400">No logo</span>
-                      )}
                     </td>
                     <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{brand.createdAt.toLocaleDateString()}</td>
                     <td className="px-6 py-4">
