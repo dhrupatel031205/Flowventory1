@@ -1,0 +1,17 @@
+{
+  "name": "flowventory",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "api"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=api\"",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=api"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
