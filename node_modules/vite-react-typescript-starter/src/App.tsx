@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { DataProvider } from './context/DataContext';
 import LoginForm from './components/Auth/LoginForm';
@@ -11,6 +11,21 @@ import CategoryManagement from './components/Management/CategoryManagement';
 import BrandManagement from './components/Management/BrandManagement';
 import UserManagement from './components/Management/UserManagement';
 import ActivityLogs from './components/Logs/ActivityLogs';
+import HelpCenter from './components/Support/HelpCenter';
+import Documentation from './components/Support/Documentation';
+import ApiReference from './components/Support/ApiReference';
+import ContactSupport from './components/Support/ContactSupport';
+
+// ScrollToTop component to handle scrolling to top on route change
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 function AppContent() {
   const { isAuthenticated, user } = useAuth();
@@ -22,6 +37,7 @@ function AppContent() {
   return (
     <DataProvider>
       <div className="app-shell min-h-screen relative z-0">
+        <ScrollToTop />
         <AppNavbar />
 
         <main className="min-h-[calc(100vh-4rem)]">
@@ -44,6 +60,12 @@ function AppContent() {
               path="/users"
               element={user?.role === 'admin' ? <UserManagement /> : <Navigate to="/dashboard" replace />}
             />
+
+            {/* Support pages */}
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/api-docs" element={<ApiReference />} />
+            <Route path="/contact" element={<ContactSupport />} />
 
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/dashboard" replace />} />

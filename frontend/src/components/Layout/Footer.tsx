@@ -106,15 +106,15 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <FiMail className="w-4 h-4 text-gray-500 dark:text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">support@flowventory.com</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">omeshdesai@gmail.com</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">For technical support</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <FiPhone className="w-4 h-4 text-gray-500 dark:text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Mon-Fri 9AM-6PM EST</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">+91 84880 67913</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Mon-Fri 9AM-6PM IST</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
