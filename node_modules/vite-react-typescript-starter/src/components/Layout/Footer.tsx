@@ -135,17 +135,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-600 dark:text-gray-300">
               <p>© {new Date().getFullYear()} Flowventory. All rights reserved.</p>
-              <div className="flex items-center space-x-4">
-                {legalLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.path}
-                    className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
+             
             </div>
             <div className="text-sm text-gray-500 dark:text-gray-400">
               Built with ❤️ for efficient inventory management
