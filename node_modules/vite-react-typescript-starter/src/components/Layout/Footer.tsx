@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiHome, FiPackage, FiTag, FiUsers, FiFileText, FiMail, FiPhone, FiMapPin, FiGithub, FiTwitter, FiLinkedin } from 'react-icons/fi';
+import { FiHome, FiPackage, FiTag, FiUsers, FiFileText, FiMail, FiPhone, FiMapPin, FiGithub, FiTwitter, FiLinkedin, FiUser } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -122,6 +122,13 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-300">123 Business Ave</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Suite 100, New York, NY 10001</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <FiUser className="w-4 h-4 text-gray-500 dark:text-gray-400 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Omesh Desai</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">S1036938@</p>
                 </div>
               </div>
             </div>

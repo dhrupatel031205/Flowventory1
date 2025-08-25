@@ -192,6 +192,9 @@ const LoginForm: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className=''>
+          Omesh Desai  (S1036938@)
+        </div>
 
         {/* Footer */}
         <div className="text-center mt-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
